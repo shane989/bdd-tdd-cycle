@@ -13,6 +13,10 @@ Rottenpotatoes::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :movies
+  
+   match 'similar_movies/:id' => 'movies#similar_movies', :as => :similar_movies
+   match 'coverage' => 'movies#coverage', :as => :coverage
+
 
   # Sample resource route with options:
   #   resources :products do
@@ -49,7 +53,7 @@ Rottenpotatoes::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'movies#index'
 
   # See how all your routes lay out with "rake routes"
 
