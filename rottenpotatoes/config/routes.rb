@@ -15,6 +15,7 @@ Rottenpotatoes::Application.routes.draw do
   resources :movies
   
    match 'similar_movies/:id' => 'movies#similar_movies', :as => :similar_movies
+   
    match 'coverage' => 'movies#coverage', :as => :coverage
 
 
